@@ -21,6 +21,7 @@ const Product = new graphql.GraphQLObjectType({
     id: { type: graphql.GraphQLInt },
     name: { type: graphql.GraphQLString },
     description: { type: graphql.GraphQLString },
+    price: { type: graphql.GraphQLFloat }
   })
 });
 

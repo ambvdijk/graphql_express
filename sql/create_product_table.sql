@@ -3,6 +3,7 @@ CREATE TABLE public.product
     id serial NOT NULL,
     name character varying(255) NOT NULL,
     description character varying(1024),
+	price decimal,
     PRIMARY KEY (id)
 );
 
