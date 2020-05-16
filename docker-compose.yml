@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  shopping-db:
+    restart: always
+    container_name: shopping-db
+    image: postgres:12.3
+    ports:
+      - 4251:5432
+    environment:
+      POSTGRES_USER: postgres-user
+      POSTGRES_PASSWORD: x@VZhYX812be&dXdb5!w
+      POSTGRES_DB: shopping-db
+
+  pgadmin:
+    restart: always
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    depends_on:
+      - shopping-db
+    ports:
+      - 4252:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@postgresql.com
+      PGADMIN_DEFAULT_PASSWORD: Uqs2MvzupYX4Y!Ow!m9@
+      PGPASSFILE: /pgadmin4/pgpassfile
+    volumes:
+      - "./pgadmin/servers.json:/pgadmin4/servers.json"
+      - "./pgadmin/pgpassfile:/pgadmin4/pgpassfile"

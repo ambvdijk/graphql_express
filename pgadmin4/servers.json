@@ -1,0 +1,21 @@
+{
+    "Servers": {
+        "1": {
+            "Name": "shopping-db",
+            "Group": "Servers",
+            "Host": "shopping-db",
+            "Port": 5432,
+            "MaintenanceDB": "shopping",
+            "Username": "postgres-user",
+            "SSLMode": "prefer",
+            "SSLCert": "<STORAGE_DIR>/.postgresql/postgresql.crt",
+            "SSLKey": "<STORAGE_DIR>/.postgresql/postgresql.key",
+            "SSLCompression": 0,
+            "Timeout": 10,
+            "UseSSHTunnel": 0,
+            "TunnelPort": "22",
+            "TunnelAuthentication": 0,
+            "PassFile": "pgpassfile"
+        }
+    }
+}
